@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="full" size="1.625600 1.219200" />
+    <ImageTarget name="WillieSign2" size="1.625600 0.492862" />
     <ImageTarget name="WillieSign" size="1.625600 0.575230" />
     <ImageTarget name="mild" size="0.040000 0.082186" />
   </Tracking>
