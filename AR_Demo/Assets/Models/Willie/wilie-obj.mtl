@@ -1,0 +1,8 @@
+newmtl lambert2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd WillieMaya1-TM_u0_v0.tif
+bump  -bm 1 -mm_0.344156_0.649351_WillieMaya1-NM_u0_v0.tif
+Ni 1.00
