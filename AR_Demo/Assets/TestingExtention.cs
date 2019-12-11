@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class TestingExtention : DefaultTrackableEventHandler
 {
-    public bool isOn = false;
-    public GameObject cube;
+    public bool isOn = false, turnOn = false;
+    public GameObject bench, sign, hawk;
 
     protected override void OnTrackingFound()
     {
         if (mTrackableBehaviour)
         {
-            isOn = true;
+            turnOn = true;
 
             var rendererComponents = mTrackableBehaviour.GetComponentsInChildren<Renderer>(true);
             var colliderComponents = mTrackableBehaviour.GetComponentsInChildren<Collider>(true);
@@ -31,8 +31,19 @@ public class TestingExtention : DefaultTrackableEventHandler
         }
     }
 
+    //protected override void OnTrackingLost()
+    //{
+        // do nothing
+    //}
+
     private void Update()
     {
-        if (isOn && !cube.activeSelf) cube.SetActive(true);
+        if (turnOn && !isOn)
+        {
+            bench.SetActive(true);
+            sign.SetActive(true);
+            hawk.SetActive(true);
+            isOn = true;
+        }
     }
 }
