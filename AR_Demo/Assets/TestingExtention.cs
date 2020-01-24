@@ -28,6 +28,8 @@ public class TestingExtention : DefaultTrackableEventHandler
             // Enable canvas':
             foreach (var component in canvasComponents)
                 component.enabled = true;
+
+            gameObject.SetActive(false);
         }
     }
 
@@ -36,6 +38,7 @@ public class TestingExtention : DefaultTrackableEventHandler
         // do nothing
     //}
 
+        /*
     private void Update()
     {
         if (turnOn && !isOn)
@@ -45,5 +48,5 @@ public class TestingExtention : DefaultTrackableEventHandler
             hawk.SetActive(true);
             isOn = true;
         }
-    }
+    }*/
 }
