@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class audioController : MonoBehaviour
 {
-    public AudioSource clip;
+    public AudioSource source;
     GameObject willy;
     // Start is called before the first frame update
     void Start()
     {
-        clip = GetComponent<AudioSource>();
+        source = GetComponent<AudioSource>();
         playWillyAudio();
         willy = GameObject.Find("WillyW"); //finds game object with specified name
    
@@ -21,19 +21,19 @@ public class audioController : MonoBehaviour
     {
         
     }
-    //call to play clip
+    //
+
+    /// <summary>
+    /// Call this method to play clip
+    /// </summary>
     public void playWillyAudio()
     {
-        if (!clip.isPlaying)
-            clip.Play();
+        if (!source.isPlaying)
+            source.Play();
     }
     //plays clip when object is enabled
     private void OnEnable()
     {
         playWillyAudio();
-    }
-    private void OnDisable()
-    {
-        clip.Stop();
     }
 }
