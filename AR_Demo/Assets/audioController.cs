@@ -17,12 +17,12 @@ public class audioController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+   
     }
-    //
 
     /// <summary>
-    /// Call this method to play clip
+    /// Call this method to play Willy audio clip.
+    /// Only plays if clip is not already playing.
     /// </summary>
     public void playWillyAudio()
     {
