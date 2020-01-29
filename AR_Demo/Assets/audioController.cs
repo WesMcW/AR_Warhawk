@@ -12,8 +12,6 @@ public class audioController : MonoBehaviour
         source = GetComponent<AudioSource>();
         playWillyAudio();
         willy = GameObject.Find("WillyW"); //finds game object with specified name
-   
-
     }
 
     // Update is called once per frame
