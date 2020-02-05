@@ -323,7 +323,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d9329558b43026409bd55e965b04997, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 359734952}
+  source: {fileID: 0}
+  willy: {fileID: 0}
 --- !u!1 &691459549
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,7 +514,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2010778322
 Transform:
   m_ObjectHideFlags: 0
