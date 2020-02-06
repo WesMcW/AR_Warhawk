@@ -5,7 +5,7 @@ using UnityEngine;
 public class TestingExtention : DefaultTrackableEventHandler
 {
     public bool isOn = false, turnOn = false;
-    public GameObject bench, sign, hawk;
+    public GameObject objectEnabled;
 
     protected override void OnTrackingFound()
     {
@@ -29,6 +29,7 @@ public class TestingExtention : DefaultTrackableEventHandler
             foreach (var component in canvasComponents)
                 component.enabled = true;
 
+            objectEnabled.SetActive(true);
             gameObject.SetActive(false);
         }
     }
