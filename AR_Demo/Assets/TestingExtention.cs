@@ -11,7 +11,7 @@ public class TestingExtention : DefaultTrackableEventHandler
     {
         if (mTrackableBehaviour)
         {
-            turnOn = true;
+            isOn = true;
 
             var rendererComponents = mTrackableBehaviour.GetComponentsInChildren<Renderer>(true);
             var colliderComponents = mTrackableBehaviour.GetComponentsInChildren<Collider>(true);
@@ -28,10 +28,17 @@ public class TestingExtention : DefaultTrackableEventHandler
             // Enable canvas':
             foreach (var component in canvasComponents)
                 component.enabled = true;
-
-            objectEnabled.SetActive(true);
-            gameObject.SetActive(false);
         }
+
+        if (OnTargetFound != null)
+            OnTargetFound.Invoke();
+
+        hasBeenUsed();
+    }
+
+    public void hasBeenUsed()
+    {
+        //return isOn;
     }
 
     //protected override void OnTrackingLost()
