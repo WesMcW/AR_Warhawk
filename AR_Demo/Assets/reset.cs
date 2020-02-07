@@ -11,5 +11,6 @@ public class reset : MonoBehaviour
     {
         resetAudio.SetActive(false);
         resetTracking.SetActive(true);
+        transform.parent.transform.position = new Vector3(1000, 1000, 1000);
     }
 }
