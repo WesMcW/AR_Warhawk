@@ -6,7 +6,11 @@ public class TrackingFound : MonoBehaviour
 {
     public GameObject enablePlace;
     public GameObject enableCanvas;
-    public GameObject disableObject;
+
+    private void Start()
+    {
+        enablePlace.SetActive(false);
+    }
 
     public void TrackingFoundMethod()
     {

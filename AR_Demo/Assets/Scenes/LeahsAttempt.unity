@@ -621,7 +621,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enablePlace: {fileID: 1923184251}
   enableCanvas: {fileID: 1343241720}
-  disableObject: {fileID: 0}
 --- !u!1 &962536488
 GameObject:
   m_ObjectHideFlags: 0
@@ -1026,7 +1025,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1923184252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1131,7 +1130,6 @@ GameObject:
   - component: {fileID: 2076044756}
   - component: {fileID: 2076044755}
   - component: {fileID: 2076044754}
-  - component: {fileID: 2076044753}
   m_Layer: 0
   m_Name: Ground Plane Stage
   m_TagString: Untagged
@@ -1139,21 +1137,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2076044753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2076044752}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15eec296ac019c64d92b3a06f152441b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enablePlace: {fileID: 0}
-  enableCanvas: {fileID: 0}
-  disableObject: {fileID: 0}
 --- !u!114 &2076044754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1170,7 +1153,7 @@ MonoBehaviour:
   OnTargetFound:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2076044753}
+      - m_Target: {fileID: 0}
         m_MethodName: TrackingFoundMethod
         m_Mode: 1
         m_Arguments:
