@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class TrackingFound : MonoBehaviour
 {
-    public GameObject enableObject;
+    public GameObject enablePlace;
+    public GameObject enableCanvas;
+    public GameObject disableObject;
 
     public void TrackingFoundMethod()
     {
-        enableObject.SetActive(true);
+        enableCanvas.SetActive(true);
+        enablePlace.SetActive(true);
+    }
+
+    public void OnObjectPlaced()
+    {
+        enablePlace.SetActive(false);
+        enableCanvas.SetActive(false);
     }
 }
