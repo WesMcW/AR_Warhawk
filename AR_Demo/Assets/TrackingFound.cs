@@ -27,9 +27,14 @@ public class TrackingFound : MonoBehaviour
     {
         enablePlace.SetActive(false);
         enableCanvas.SetActive(false);
-        startAudio.SetActive(true);
+        Invoke("startTalking", 0.9F);
         willie.GetComponent<Animator>().SetTrigger("Start");
         // start willie animation
         // when animation ends, reset things
+    }
+
+    void startTalking()
+    {
+        startAudio.SetActive(true);
     }
 }
