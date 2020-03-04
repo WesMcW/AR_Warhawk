@@ -14,17 +14,18 @@ public class TrackingFound : MonoBehaviour
 
     private void Start()
     {
-        planeFinder.SetActive(false);
+        //planeFinder.SetActive(false);
         audioObject.SetActive(false);
     }
 
     public void TrackingFoundMethod()
     {
-        canvas.SetActive(true);
         planeFinder.SetActive(true);
         imageTrack.SetActive(false);
 
-        planeFinder.GetComponent<PlaneFinderBehaviour>().PerformHitTest( new Vector2(0, -362));
+        planeFinder.GetComponent<PlaneFinderBehaviour>().PerformHitTest( Vector2.zero);
+        //planeFinder.GetComponent<PlaneFinderBehaviour>().PerformHitTest( new Vector2(0, 0 - (Screen.height * 0.25F)));
+        //planeFinder.GetComponent<PlaneFinderBehaviour>().PerformHitTest( new Vector2(0, -362));
 
         //Event.PopEvent(planeFinder.GetComponent<AnchorInputListenerBehaviour>().OnInputReceivedEvent)
         //planeFinder.GetComponent<AnchorInputListenerBehaviour>().OnInputReceivedEvent
@@ -35,7 +36,7 @@ public class TrackingFound : MonoBehaviour
     public void OnObjectPlaced()
     {
         //planeFinder.SetActive(false);
-        planeFinder.GetComponent<AnchorInputListenerBehaviour>().enabled = false;
+        //planeFinder.GetComponent<AnchorInputListenerBehaviour>().enabled = false;
 
         canvas.SetActive(false);
         Invoke("startTalking", 0.9F);
