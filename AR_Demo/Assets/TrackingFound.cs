@@ -11,6 +11,8 @@ public class TrackingFound : MonoBehaviour
     public GameObject canvas;
     public GameObject audioObject;
     public GameObject willie;
+    public GameObject groundTxt;
+    public GameObject willieTxt;
 
     private void Start()
     {
@@ -31,6 +33,12 @@ public class TrackingFound : MonoBehaviour
         //planeFinder.GetComponent<AnchorInputListenerBehaviour>().OnInputReceivedEvent
 
         //ExecuteEvents.Execute(planeFinder, planeFinder.GetComponent<PlaneFinderBehaviour>().PerformHitTest(Vector2.zero), planeFinder.GetComponent<AnchorInputListenerBehaviour>().OnInputReceivedEvent);
+    }
+
+    public void SwapText()
+    {
+        groundTxt.SetActive(false);
+        willieTxt.SetActive(true);
     }
 
     public void OnObjectPlaced()
